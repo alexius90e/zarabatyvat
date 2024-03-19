@@ -1,0 +1,103 @@
+.header {
+  padding: 22px 0;
+
+  @include tablet {
+    padding: 10px 0;
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include tablet {
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  & .logo {
+    flex: 0 0 auto;
+
+    @include tablet {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__link {
+      @include tablet {
+        align-items: flex-start;
+        height: auto;
+        gap: 5px;
+      }
+
+      &::after {
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &::before {
+        @include tablet {
+          height: 18px;
+          margin: 0;
+        }
+      }
+    }
+
+    &__description {
+      @include tablet {
+        position: static;
+        padding: 4px 6px 3px;
+        font-size: 7px;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding-top: 15px;
+    border-top: 1px solid #3a3a3a;
+
+    @include tablet {
+      display: none;
+      border: none;
+      align-items: flex-start;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: $black;
+
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+
+    &-close {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border: none;
+    background: url(../assets/icons/burger.svg) center no-repeat;
+    cursor: pointer;
+
+    @include tablet {
+      display: inline-block;
+    }
+  }
+}

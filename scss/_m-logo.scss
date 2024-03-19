@@ -1,0 +1,44 @@
+.logo {
+  width: fit-content;
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 105px;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 45px;
+      margin-bottom: 48px;
+      aspect-ratio: 1 / 0.18367;
+      background: url(../assets/logo-text.svg) center no-repeat;
+      background-size: contain;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 93px;
+      aspect-ratio: 1 / 1.38806;
+      background: url(../assets/logo-icon.svg) center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    display: inline-block;
+    padding: 8px 14px 7px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $black;
+    border-radius: 48px;
+    background-color: $yellow;
+  }
+}
