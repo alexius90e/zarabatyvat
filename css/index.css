@@ -19,6 +19,7 @@ body.hidden {
 }
 
 h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 38px;
   line-height: normal;
@@ -34,6 +35,20 @@ h2 {
 @media (max-width: 768px) {
   h2 {
     font-size: 30px;
+  }
+}
+
+h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 164%;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+    line-height: 133%;
   }
 }
 
@@ -60,6 +75,7 @@ img {
 .button {
   display: inline-block;
   padding: 22px 77px;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 22px;
@@ -73,6 +89,17 @@ img {
   transition: transform ease-in-out 0.1s;
   will-change: transform;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .button {
+    padding: 22px 46px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .button {
+    width: 100%;
+  }
 }
 .button:hover {
   transform: scale(1.02);
@@ -334,6 +361,12 @@ img {
     line-height: 150%;
   }
 }
+@media (max-width: 768px) {
+  .first-screen__buttons {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
 .first-screen__figure {
   flex: 0 0 360px;
   display: flex;
@@ -353,6 +386,13 @@ img {
 @media (max-width: 768px) {
   .first-screen__figure {
     flex: 0 0 360px;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 400px) {
+  .first-screen__figure {
+    flex: 0 0 360px;
+    justify-content: center;
   }
 }
 .first-screen__figure-image {
@@ -364,4 +404,209 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   background: #d9d9d9;
+}
+
+.how-get-job {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .how-get-job {
+    padding-bottom: 86px;
+  }
+}
+.how-get-job__title {
+  margin: 0 0 10px;
+}
+.how-get-job__description {
+  margin: 0 0 60px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .how-get-job__description {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.how-get-job__steps {
+  margin: 0 0 60px;
+}
+@media (max-width: 768px) {
+  .how-get-job__steps {
+    margin: 0 0 40px;
+  }
+}
+.how-get-job__step {
+  position: relative;
+  max-width: 50%;
+  margin: 0 0 8px;
+  padding-top: 18px;
+  padding-right: 107px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .how-get-job__step {
+    padding-right: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .how-get-job__step {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .how-get-job__step {
+    max-width: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+}
+.how-get-job__step:nth-child(even) {
+  margin-left: auto;
+  padding-left: 107px;
+}
+@media (max-width: 1200px) {
+  .how-get-job__step:nth-child(even) {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .how-get-job__step:nth-child(even) {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .how-get-job__step:nth-child(even) {
+    max-width: none;
+    padding: 0;
+    margin: 0 0 20px;
+  }
+}
+.how-get-job__step:last-child::before, .how-get-job__step:last-child::after {
+  display: none;
+}
+.how-get-job__step::before, .how-get-job__step::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .how-get-job__step::before, .how-get-job__step::after {
+    display: none;
+  }
+}
+.how-get-job__step::before {
+  bottom: 0;
+  right: 0;
+  width: 9px;
+  height: 6px;
+  background: url(../assets/icons/arrow-bottom.svg) center no-repeat;
+  transform: translateX(4px);
+}
+.how-get-job__step:nth-child(even)::before {
+  right: auto;
+  left: 0;
+  transform: translateX(-4px);
+}
+.how-get-job__step::after {
+  top: 88px;
+  bottom: 0;
+  right: 0;
+  border-left: 1px dashed #3a3a3a;
+}
+.how-get-job__step:nth-child(even)::after {
+  right: auto;
+  left: 0;
+}
+.how-get-job__step-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #f6ca61;
+  transform: translateX(50%);
+}
+@media (max-width: 768px) {
+  .how-get-job__step-icon {
+    position: relative;
+    margin: 0 auto 20px;
+    transform: none;
+    width: 80px;
+  }
+}
+.how-get-job__step-icon-image {
+  max-width: 30px;
+}
+.how-get-job__step-icon-id {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #ffffff;
+  border-radius: 24px;
+  background-color: #3a3a3a;
+}
+.how-get-job__step:nth-child(even) .how-get-job__step-icon {
+  left: 0;
+  right: auto;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .how-get-job__step:nth-child(even) .how-get-job__step-icon {
+    position: relative;
+    margin: 0 auto 20px;
+    transform: none;
+    width: 80px;
+  }
+}
+.how-get-job__step-title {
+  margin: 0 0 10px;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .how-get-job__step-title {
+    text-align: left;
+  }
+}
+.how-get-job__step:nth-child(even) .how-get-job__step-title {
+  text-align: left;
+}
+.how-get-job__step-description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .how-get-job__step-description {
+    text-align: left;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.how-get-job__step:nth-child(even) .how-get-job__step-description {
+  text-align: left;
+}
+.how-get-job__buttons {
+  display: flex;
+  justify-content: center;
 }
