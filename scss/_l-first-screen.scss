@@ -1,0 +1,99 @@
+.first-screen {
+  padding-bottom: 100px;
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: 670px;
+  }
+
+  &__logo {
+    margin: 0 0 20px;
+
+    &-image {
+      @include tablet {
+        max-width: 103px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 0 14px;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 115%;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 14px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 110%;
+
+    @include tablet {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 115%;
+    }
+  }
+
+  &__description {
+    max-width: 570px;
+    margin: 0 0 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__figure {
+    flex: 0 0 360px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include desktop {
+      flex: 0 0 320px;
+    }
+
+    @include laptop {
+      flex: 0 0 280px;
+    }
+
+    @include tablet {
+      flex: 0 0 360px;
+    }
+
+    &-image {
+      display: block;
+      max-width: 360px;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1.25;
+      object-fit: cover;
+      background: #d9d9d9;
+    }
+  }
+}

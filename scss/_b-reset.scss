@@ -28,10 +28,6 @@ h2 {
   text-align: center;
   color: $black;
 
-  @include desktop {
-    font-size: 36px;
-  }
-
   @include laptop {
     font-size: 34px;
   }

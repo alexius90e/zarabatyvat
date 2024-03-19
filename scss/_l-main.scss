@@ -1,3 +1,12 @@
 .main {
-  
+  padding-top: 205px;
+  background: url(../assets/main-bg.svg) center top no-repeat;
+
+  @include desktop {
+    padding-top: 240px;
+  }
+
+  @include tablet {
+    padding-top: 80px;
+  }
 }
