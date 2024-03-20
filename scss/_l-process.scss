@@ -1,0 +1,90 @@
+.process {
+  padding: 100px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin: 0 0 40px;
+
+    @include tablet {
+      margin: 0 0 20px;
+    }
+  }
+
+  &__text {
+    margin: 18px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+
+    @include tablet {
+      margin: 16px 0;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__details {
+    margin: 30px 0;
+    padding: 30px 0;
+    border-top: 1px dashed $black;
+    border-bottom: 1px dashed $black;
+
+    &-text {
+      max-width: 768px;
+      margin: 0 auto;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 167%;
+      text-align: center;
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 150%;
+      }
+
+      & > a {
+        color: #fc3f1d;
+      }
+    }
+  }
+
+  &__figure {
+    margin: 60px 0;
+
+    @include tablet {
+      margin: 20px 0;
+    }
+
+    &-image {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &-caption {
+      margin: 10px 0 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 171%;
+      text-align: center;
+
+      @include tablet {
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include tablet {
+      margin-top: 40px;
+    }
+  }
+}
