@@ -1,7 +1,98 @@
 .start-job {
-  padding: 100px 0;
+  padding: 100px 0 60px;
 
   @include tablet {
-    padding: 60px 0;
+    padding: 60px 0 40px;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    flex: 0 1 570px;
+    padding-top: 60px;
+
+    @include laptop {
+      padding-top: 0;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    text-align: left;
+
+    @include tablet {
+      margin: 0 0 5px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+
+    @include tablet {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 167%;
+
+    @include tablet {
+      margin: 0 0 10px;
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+
+  &__buttons {
+    margin: 40px 0 0;
+
+    @include tablet {
+    }
+  }
+
+  &__figure {
+    flex: 0 0 472px;
+
+    @include laptop {
+      flex: 0 0 340px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    &-image {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1.16525;
+      background-color: #d9d9d9;
+
+      @include tablet {
+        max-width: 472px;
+      }
+    }
   }
 }
