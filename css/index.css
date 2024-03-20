@@ -1052,6 +1052,118 @@ img {
   }
 }
 
+.advantages__title {
+  margin: 0 0 10px;
+}
+.advantages__text {
+  margin: 0 0 60px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .advantages__text {
+    margin: 0 0 40px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.advantages__items {
+  display: flex;
+  gap: 30px 18px;
+}
+@media (max-width: 768px) {
+  .advantages__items {
+    flex-direction: column;
+  }
+}
+.advantages__block {
+  flex: 0 0 calc(50% - 9px);
+}
+.advantages__block-title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+.advantages__block-title-circle {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-color: #f6ca61;
+}
+.advantages__block-title-circle::before {
+  content: "+";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  border-radius: 24px;
+  background-color: #07ba64;
+  border: 3px solid #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+}
+.advantages__block-title-text {
+  position: absolute;
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+  .advantages__block-title-text {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 200%;
+  }
+}
+.advantages__block_minus .advantages__block-title-circle::before {
+  content: "-";
+  background-color: #fc3f1d;
+}
+.advantages__block-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.advantages__block-list-item {
+  padding: 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 167%;
+  text-align: center;
+  border-bottom: 1px solid #07ba64;
+}
+@media (max-width: 768px) {
+  .advantages__block-list-item {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+.advantages__block-list-item:first-child {
+  padding-top: 0;
+}
+.advantages__block-list-item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.advantages__block_minus .advantages__block-list-item {
+  border-bottom: 1px solid #fc3f1d;
+}
+.advantages__block_minus .advantages__block-list-item:last-child {
+  border: none;
+}
+
 .start-job {
   padding: 100px 0;
 }
