@@ -1,0 +1,40 @@
+.accordeon {
+  border: 1px solid #e9ecfa;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      flex: 0 0 auto;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background: url(../assets/icons/plus.svg) center no-repeat;
+      transition: transform ease-in-out 0.1s;
+      will-change: transform;
+
+      @include tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &.active &__toggler {
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__panel {
+    max-height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-height ease-in-out 0.2s;
+  }
+}

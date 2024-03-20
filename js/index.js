@@ -1,3 +1,5 @@
+import './accordeon.js';
+
 const headerBurger = document.querySelector('.header__burger');
 const headerNav = document.querySelector('.header__nav');
 
