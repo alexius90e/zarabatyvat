@@ -222,6 +222,18 @@ img {
     border-bottom: 1px solid #3a3a3a;
   }
 }
+@media (max-width: 768px) {
+  .header.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 499;
+    background-color: rgba(58, 58, 58, 0.5);
+  }
+}
 .header .container {
   display: flex;
   justify-content: center;
@@ -280,9 +292,26 @@ img {
 }
 @media (max-width: 768px) {
   .header__nav {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    padding: 35px 0 19px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0;
     border: none;
-    align-items: flex-start;
+    background-color: white;
+    transform: translateY(-1500px);
+    transition: transform ease-in-out 0.2s;
+    will-change: transform;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav.active {
+    transform: translateY(0);
   }
 }
 .header__nav-link {
@@ -296,8 +325,76 @@ img {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  .header__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 586px;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-bottom: 1px solid #d7dbec;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-link::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #adb2c9;
+  }
+}
+.header__nav-link.active {
+  color: #fc3f1d;
+}
+@media (max-width: 768px) {
+  .header__nav-link.active {
+    color: #3a3a3a;
+    font-weight: 600;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-link.active::before {
+    background-color: #f6ca61;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-link:first-child {
+    padding-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .header__nav-link:last-of-type {
+    padding-bottom: 0;
+    border: none;
+  }
+}
 .header__nav-close {
   display: none;
+}
+@media (max-width: 768px) {
+  .header__nav-close {
+    position: absolute;
+    top: 10px;
+    left: calc(50% + 238px);
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border: none;
+    background: url(../assets/icons/close.svg) center no-repeat;
+    cursor: pointer;
+  }
+}
+@media (max-width: 576px) {
+  .header__nav-close {
+    left: auto;
+    right: 20px;
+  }
 }
 .header__burger {
   display: none;

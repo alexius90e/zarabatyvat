@@ -10,6 +10,19 @@
     border-bottom: 1px solid #3a3a3a;
   }
 
+  &.active::before {
+    @include tablet {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 499;
+      background-color: rgba($color: $black, $alpha: 0.5);
+    }
+  }
+
   & .container {
     display: flex;
     justify-content: center;
@@ -71,9 +84,27 @@
     border-top: 1px solid #3a3a3a;
 
     @include tablet {
-      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 500;
+      padding: 35px 0 19px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0;
       border: none;
-      align-items: flex-start;
+      background-color: rgba($color: $white, $alpha: 1);
+      transform: translateY(-1500px);
+      transition: transform ease-in-out 0.2s;
+      will-change: transform;
+    }
+
+    &.active {
+      @include tablet {
+        transform: translateY(0);
+      }
     }
 
     &-link {
@@ -85,10 +116,80 @@
       @include desktop {
         font-size: 14px;
       }
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 586px;
+        width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        font-size: 16px;
+        border-bottom: 1px solid #d7dbec;
+      }
+
+      &::before {
+        
+        @include tablet {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 6px;
+          background-color: #adb2c9;
+        }
+      }
+
+      &.active {
+        color: #fc3f1d;
+
+        @include tablet {
+          color: $black;
+          font-weight: 600;
+        }
+
+        &::before {
+          @include tablet {
+            background-color: $yellow;
+          }
+        }
+      }
+
+      &:first-child {
+        @include tablet {
+          padding-top: 0;
+        }
+      }
+
+      &:last-of-type {
+        @include tablet {
+          padding-bottom: 0;
+          border: none;
+        }
+      }
     }
 
     &-close {
       display: none;
+
+      @include tablet {
+        position: absolute;
+        top: 10px;
+        left: calc(50% + 238px);
+        display: block;
+        height: 30px;
+        width: 30px;
+        padding: 0;
+        border: none;
+        background: url(../assets/icons/close.svg) center no-repeat;
+        cursor: pointer;
+      }
+
+      @include mobile {
+        left: auto;
+        right: 20px;
+      }
     }
   }
 

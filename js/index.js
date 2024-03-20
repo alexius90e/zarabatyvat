@@ -1,10 +1,12 @@
 import './accordeon.js';
 
+const header = document.querySelector('.header');
 const headerBurger = document.querySelector('.header__burger');
 const headerNav = document.querySelector('.header__nav');
 
-if (headerBurger && headerNav) {
+if (headerBurger && headerNav && header) {
   headerBurger.addEventListener('click', () => {
+    header.classList.toggle('active');
     headerBurger.classList.toggle('active');
     headerNav.classList.toggle('active');
     document.body.classList.toggle('hidden');
@@ -14,6 +16,16 @@ if (headerBurger && headerNav) {
     if (event.target.classList.contains('close')) {
       event.currentTarget.classList.remove('active');
       headerBurger.classList.remove('active');
+      header.classList.remove('active');
+      document.body.classList.remove('hidden');
+    }
+  });
+
+  header.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+      headerNav.classList.remove('active');
+      headerBurger.classList.remove('active');
+      header.classList.remove('active');
       document.body.classList.remove('hidden');
     }
   });
