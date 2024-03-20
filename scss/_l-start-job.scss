@@ -1,0 +1,7 @@
+.start-job {
+  padding: 100px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+}
